@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #09090D;
+  color: #F5F5F7;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Subtle futuristic Spider-Web background matrix */
+.spider-web-bg {
+  background-color: #09090D;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(230, 36, 41, 0.12) 0%, transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(230, 36, 41, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 0% 50%, rgba(255, 59, 69, 0.04) 0%, transparent 35%),
+    url("data:image/svg+xml,%3Csvg width='140' height='140' viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M70 0 L70 140 M0 70 L140 70 M0 0 L140 140 M140 0 L0 140' stroke='rgba(230,36,41,0.04)' stroke-width='0.75' fill='none'/%3E%3Cpolygon points='70,20 105,35 120,70 105,105 70,120 35,105 20,70 35,35' stroke='rgba(230,36,41,0.035)' stroke-width='0.75' fill='none'/%3E%3Cpolygon points='70,42 90,50 98,70 90,90 70,98 50,90 42,70 50,50' stroke='rgba(230,36,41,0.04)' stroke-width='0.75' fill='none'/%3E%3C/svg%3E");
+}
+
+/* Faint sidebar web pattern */
+.sidebar-web-bg {
+  background-color: #12121A;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(230, 36, 41, 0.09) 0%, transparent 70%),
+    url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 L50 100 M0 50 L100 50 M0 0 L100 100 M100 0 L0 100' stroke='rgba(230,36,41,0.03)' stroke-width='0.6' fill='none'/%3E%3Cpolygon points='50,22 70,30 78,50 70,70 50,78 30,70 22,50 30,30' stroke='rgba(230,36,41,0.025)' stroke-width='0.6' fill='none'/%3E%3C/svg%3E");
+}
+
+/* Custom developer scrollbar with dark charcoal & subtle red hover */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0D14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #251B20;
+  border-radius: 4px;
+  border: 1px solid rgba(230, 36, 41, 0.15);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E62429;
+  box-shadow: 0 0 10px rgba(230, 36, 41, 0.5);
+}
+
+/* Markdown typography */
+.markdown-body {
+  color: #E2E2E8;
+  font-size: 0.925rem;
+  line-height: 1.68;
+}
+
+.markdown-body p {
+  margin: 0.75rem 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4 {
+  color: #FFFFFF;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-body h1 {
+  font-size: 1.25rem;
+  border-bottom: 1px solid #2B161B;
+  padding-bottom: 0.35rem;
+}
+
+.markdown-body h2 {
+  font-size: 1.1rem;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin: 0.6rem 0 0.6rem 1.4rem;
+  padding-left: 0;
+}
+
+.markdown-body li {
+  margin: 0.25rem 0;
+}
+
+.markdown-body strong {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.markdown-body pre {
+  margin: 0.85rem 0;
+}
+
+.hljs {
+  background: transparent !important;
+  color: #E6EDF3 !important;
+}
+
+/* Pulse animation for suit status indicator */
+@keyframes spiderPulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 8px rgba(230, 36, 41, 0.7);
+  }
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 2px rgba(230, 36, 41, 0.2);
+  }
+}
+
+.spider-pulse {
+  animation: spiderPulse 2.4s ease-in-out infinite;
+}
